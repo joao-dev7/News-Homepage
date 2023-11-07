@@ -9,12 +9,13 @@ body {
 
 .conteiner {
   display: grid;
-  width: 70%;
-  height: 90%;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 4rem 31rem 10.7rem 3rem;
+  align-content: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns:40rem 20rem;
+  grid-template-rows: 5.5rem 31rem 10.7rem 3rem;
   grid-column-gap: 1.5rem;
-  background-color: rgb(151, 138, 138);
 }
 
 nav {
@@ -25,13 +26,19 @@ nav {
 }
 
 .nav-logo{
+  height: 2.2rem;
   margin-left: .5rem;
 }
 
 .nav-ul {
   display: flex;
   list-style-type: none;
-  gap: 2.5rem;
+  gap: 2.3rem;
+}
+
+.nav-ul li:hover {
+  cursor: pointer;
+  color :hsl(5, 85%, 63%);
 }
 
 main {
@@ -77,12 +84,17 @@ main {
   font-weight: 700;
   font-size: .7rem;
   letter-spacing: .15rem;
-  margin-top: .6rem;
+  margin-top: 1.8rem;
   border: 0;
   background-color: hsl(5, 85%, 63%);
   color: hsl(36, 100%, 99%);
   width: 10rem;
   height: 2.7rem;
+}
+
+.main-section-content button:hover {
+  cursor: pointer;
+  background-color:  hsl(240, 100%, 5%);
 }
 
 .article-sidebar {
@@ -98,21 +110,27 @@ main {
   font-size: 2rem;
   color: hsl(35, 77%, 62%);
 }
+
 .article-sidebar p {
   font-size: .87rem;
   line-height: 1.5rem;
   color: hsl(233, 8%, 79%);
   margin-bottom: 1.7rem;
 }
+
 .article-sidebar p b{
   font-size: 1rem;
   line-height: 2.5rem;
   color: hsl(36, 100%, 99%);
 }
 
+.article-sidebar p b:hover {
+  color: hsl(35, 77%, 62%);
+}
+
 .article-bottom {
-  align-self: flex-end;
   grid-area: 3 / 1 / 4 / 3;
+  align-self: flex-end;
   display: grid;
   grid-template-columns: 20rem 20rem 22.25rem;
   grid-template-rows: 7rem;
@@ -161,8 +179,15 @@ main {
   font-size: .9rem;
 }
 
+.article-bottom p b:hover{
+  color: hsl(5, 85%, 63%);
+}
 
 .footer-attribution {
+    grid-area: 4 / 1 / 5 / 3;
+    align-self: flex-end ;
+    display: flex;
+    justify-content: center;    
     font-size: 11px;
     text-align: center;
   }
