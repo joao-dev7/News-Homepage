@@ -11,14 +11,13 @@ body {
   display: grid;
   align-content: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
   grid-template-columns:40rem 20rem;
   grid-template-rows: 5.5rem 31rem 10.7rem 3rem;
   grid-column-gap: 1.5rem;
 }
 
 nav {
+  margin-top: 1rem;
   grid-area: 1 / 1 / 2 / 3; 
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -35,6 +34,8 @@ nav {
   list-style-type: none;
   gap: 2.3rem;
 }
+
+.nav-menu {display: none;}
 
 .nav-ul li:hover {
   cursor: pointer;
