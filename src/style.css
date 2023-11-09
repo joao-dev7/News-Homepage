@@ -47,12 +47,13 @@ nav {
 main {
   grid-area: 2 / 1 / 3 / 2; 
   display: flex;
-  height: 31rem;
   flex-direction: column;
   gap: 2rem;
 }
 
-.main-img-desktop {
+.main-img {
+  background: url(../assets/images/image-web-3-desktop.jpg) no-repeat;
+  background-size: 100% 100%;
   width: 40rem;
   height: 18rem;
 }
@@ -63,7 +64,6 @@ main {
   height: 11rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:"a b" "a c";
 }
 
 .main-section-content h1 {
@@ -142,7 +142,7 @@ main {
 .article-bottom-section {
   display: grid;
   grid-template-columns: 5.6rem 13.4rem;
-  grid-template-rows: 2rem 5rem;
+  grid-template-rows: 2rem 2rem 5rem;
   grid-column-gap: 1rem;
 }
 
@@ -152,7 +152,7 @@ main {
 }
 
 .article-bottom img {
-  grid-area: 1 / 1 / 3 / 2; 
+  grid-area: 1 / 1 / 5 / 2; 
   height: 7rem;
   width: 5.6rem;
 }
@@ -162,27 +162,30 @@ main {
   margin: 0;
   font-size: 1.6rem;
   font-weight: 700;
+  color: hsl(233, 8%, 79%);
 }
 
-.article-bottom p {
-  grid-area: 2 / 2 / 3 / 3;
-  margin: 0;
-  margin-top: .2rem;
-  line-height: 1.2rem;
-  width: 11.2rem;
-  font-size: .75rem;
-  font-weight: 300;
-  color: hsl(240, 100%, 5%);
-}
-.article-bottom p b {
+.article-bottom b {
   font-weight: 800;
   line-height: 2rem;
   font-size: .9rem;
 }
 
+.article-bottom p {
+  grid-area: 3 / 2 / 4 / 3;
+  margin: 0;
+  margin-top: .2rem;
+  line-height: 1.3rem;
+  width: 11.2rem;
+  font-size: .75rem;
+  font-weight: 500;
+  color: hsl(236, 13%, 42%);
+}
+
 .article-bottom p b:hover{
   color: hsl(5, 85%, 63%);
 }
+
 .footer-attribution {
     grid-area: 4 / 1 / 5 / 3;
     align-self: flex-end ;

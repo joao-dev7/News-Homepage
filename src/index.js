@@ -12,7 +12,7 @@ const menuClose = document.createElement("img")
 menuClose.classList.add("conteiner-menuBar-menuClose")
 menuClose.setAttribute('src', '../assets/images/icon-menu-close.svg')
 
-if (screen.width <= 990) {
+if (window.innerWidth <= 990) {
     nav.appendChild(menuIcon)
     
     menuIcon.onclick = () => {
