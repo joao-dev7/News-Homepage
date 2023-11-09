@@ -11,6 +11,8 @@ body {
   display: grid;
   align-content: center;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
   grid-template-columns:40rem 20rem;
   grid-template-rows: 5.5rem 31rem 10.7rem 3rem;
   grid-column-gap: 1.5rem;
@@ -160,7 +162,6 @@ main {
   margin: 0;
   font-size: 1.6rem;
   font-weight: 700;
-  color: hsl(233, 8%, 79%);
 }
 
 .article-bottom p {
@@ -173,7 +174,6 @@ main {
   font-weight: 300;
   color: hsl(240, 100%, 5%);
 }
-
 .article-bottom p b {
   font-weight: 800;
   line-height: 2rem;
@@ -183,7 +183,6 @@ main {
 .article-bottom p b:hover{
   color: hsl(5, 85%, 63%);
 }
-
 .footer-attribution {
     grid-area: 4 / 1 / 5 / 3;
     align-self: flex-end ;

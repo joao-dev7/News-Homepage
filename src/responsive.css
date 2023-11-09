@@ -1,4 +1,4 @@
-@media ( 375px <= width <= 983px ) {
+@media ( 375px <= width <= 990px ) {   
     .nav-ul {
         display: none;
     }
@@ -13,14 +13,14 @@
     .conteiner-menuBar {
         background-color: hsl(36, 100%, 99%);
         position: absolute;
-        left: 53%;
+        left: 43.4rem;
         height: 100%;
-        width: 50vw;
+        width: 30%;
     }
 
     .conteiner-menuBar-menuClose{
-        position: relative;
-        left: 59rem;
-        bottom: 49rem;
-    }
+        position: absolute;
+        left: 59.15rem;
+        bottom: 48.5rem;
+    } 
 }

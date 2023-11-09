@@ -1,7 +1,7 @@
 const conteiner = document.querySelector(".conteiner")
 const nav = document.querySelector("nav")
-
 const menuIcon = document.createElement("img")
+
 menuIcon.classList.add("nav-menu")
 menuIcon.setAttribute('src', '../assets/images/icon-menu.svg')
 
@@ -12,7 +12,7 @@ const menuClose = document.createElement("img")
 menuClose.classList.add("conteiner-menuBar-menuClose")
 menuClose.setAttribute('src', '../assets/images/icon-menu-close.svg')
 
-if (conteiner.style.height <= "983px") {
+if (screen.width <= 990) {
     nav.appendChild(menuIcon)
     
     menuIcon.onclick = () => {
