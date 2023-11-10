@@ -1,26 +1,53 @@
-const conteiner = document.querySelector(".conteiner")
-const nav = document.querySelector("nav")
-const menuIcon = document.createElement("img")
+const conteiner = document.querySelector(".conteiner");
+const nav = document.querySelector("nav");
 
-menuIcon.classList.add("nav-menu")
-menuIcon.setAttribute('src', '../assets/images/icon-menu.svg')
+/* Set Icons */
+const menuIcon = document.createElement("img");
+const menuClose = document.createElement("img");
+setMenu();
+setClose();
 
-const menuBar = document.createElement("div")
-menuBar.classList.add("conteiner-menuBar")
+/* CloneUl*/
+const ul = document.querySelector("ul");
+const menuUl = ul.cloneNode(true);
+menuUl.classList.add("menuBar-ul");
 
-const menuClose = document.createElement("img")
-menuClose.classList.add("conteiner-menuBar-menuClose")
-menuClose.setAttribute('src', '../assets/images/icon-menu-close.svg')
+/* Set MenuBar*/
+const menuBar = document.createElement("div");
+menuBar.classList.add("conteiner-menuBar");
 
-if (window.innerWidth <= 990) {
-    nav.appendChild(menuIcon)
-    
-    menuIcon.onclick = () => {
-        conteiner.appendChild(menuBar)
-        conteiner.appendChild(menuClose)
-        menuClose.onclick = () => {
-            conteiner.removeChild(menuBar)
-            conteiner.removeChild(menuClose)
-        }
-    }
+/* Menu display add */
+if (window.innerWidth <= 420) {
+  nav.appendChild(menuIcon);
+  menuIcon.onclick = () => {
+    addMenuBar();
+    menuClose.onclick = () => {
+      removeMenuBar();
+      nav.appendChild(menuIcon);
+    };
+  };
+}
+
+/* Refactoring functions */
+
+function setMenu() {
+  menuIcon.classList.add("nav-menu");
+  menuIcon.setAttribute("src", "../assets/images/icon-menu.svg");
+}
+
+function setClose() {
+    menuClose.classList.add("nav-menuClose");
+    menuClose.setAttribute("src", "../assets/images/icon-menu-close.svg");
+}
+
+function addMenuBar() {
+    nav.removeChild(menuIcon);
+  nav.appendChild(menuClose);
+  conteiner.appendChild(menuBar);
+  menuBar.appendChild(menuUl);
+}
+
+function removeMenuBar() {
+    conteiner.removeChild(menuBar);
+    nav.removeChild(menuClose);
 }
