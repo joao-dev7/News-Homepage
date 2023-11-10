@@ -166,6 +166,7 @@
   }
 
   .nav-menuClose {
+    position: fixed;
     z-index: 999;
     justify-self: flex-end;
     display: inline;
