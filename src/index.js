@@ -1,7 +1,7 @@
 const conteiner = document.querySelector(".conteiner");
 const nav = document.querySelector("nav");
 
-/* Set Icons */
+/* SetIcons */
 const menuIcon = document.createElement("img");
 const menuClose = document.createElement("img");
 setMenu();
@@ -12,7 +12,7 @@ const ul = document.querySelector("ul");
 const menuUl = ul.cloneNode(true);
 menuUl.classList.add("menuBar-ul");
 
-/* Set MenuBar*/
+/* SetMenuBar*/
 const menuBar = document.createElement("div");
 menuBar.classList.add("conteiner-menuBar");
 
@@ -28,8 +28,7 @@ if (window.innerWidth <= 420) {
   };
 }
 
-/* Refactoring functions */
-
+/* Refactor functions */
 function setMenu() {
   menuIcon.classList.add("nav-menu");
   menuIcon.setAttribute("src", "../assets/images/icon-menu.svg");
