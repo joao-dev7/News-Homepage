@@ -3,12 +3,9 @@ const nav = document.querySelector("nav");
 
 /* SetIcons */
 const menuIcon = document.createElement("img");
-menuIcon.classList.add("nav-menu");
-menuIcon.src = "../assets/images/icon-menu.svg";
-
 const menuClose = document.createElement("img");
-menuClose.classList.add("nav-menuClose");
-menuClose.src = "../assets/images/icon-menu-close.svg";
+setMenu(menuIcon);
+setClose(menuClose);
 
 /* CloneUl*/
 const ul = document.querySelector("ul");
@@ -23,24 +20,33 @@ menuBar.classList.add("conteiner-menuBar");
 if (window.innerWidth <= 420) {
   nav.appendChild(menuIcon);
   menuIcon.onclick = () => {
-    nav.removeChild(menuIcon);
     addMenuBar();
     menuClose.onclick = () => {
-      nav.appendChild(menuIcon);
       removeMenuBar();
+      nav.appendChild(menuIcon);
     };
   };
 }
 
 /* Refactor functions */
+function setMenu() {
+  menuIcon.classList.add("nav-menu");
+  menuIcon.setAttribute("src", "./assets/images/icon-menu.svg");
+}
+
+function setClose() {
+    menuClose.classList.add("nav-menuClose");
+    menuClose.setAttribute("src", "./assets/images/icon-menu-close.svg");
+}
 
 function addMenuBar() {
+    nav.removeChild(menuIcon);
   nav.appendChild(menuClose);
   conteiner.appendChild(menuBar);
   menuBar.appendChild(menuUl);
 }
 
 function removeMenuBar() {
-  conteiner.removeChild(menuBar);
-  nav.removeChild(menuClose);
+    conteiner.removeChild(menuBar);
+    nav.removeChild(menuClose);
 }
