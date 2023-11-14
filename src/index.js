@@ -4,11 +4,11 @@ const nav = document.querySelector("nav");
 /* SetIcons */
 const menuIcon = document.createElement("img");
 menuIcon.classList.add("nav-menu");
-menuIcon.setAttribute("src", "../assets/images/icon-menu.svg");
+menuIcon.src = "../assets/images/icon-menu.svg";
 
 const menuClose = document.createElement("img");
 menuClose.classList.add("nav-menuClose");
-menuClose.setAttribute("src", "../assets/images/icon-menu-close.svg");
+menuClose.src = "../assets/images/icon-menu-close.svg";
 
 /* CloneUl*/
 const ul = document.querySelector("ul");
