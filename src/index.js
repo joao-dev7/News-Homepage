@@ -23,10 +23,11 @@ menuBar.classList.add("conteiner-menuBar");
 if (window.innerWidth <= 420) {
   nav.appendChild(menuIcon);
   menuIcon.onclick = () => {
+    nav.removeChild(menuIcon);
     addMenuBar();
     menuClose.onclick = () => {
-      removeMenuBar();
       nav.appendChild(menuIcon);
+      removeMenuBar();
     };
   };
 }
@@ -34,13 +35,12 @@ if (window.innerWidth <= 420) {
 /* Refactor functions */
 
 function addMenuBar() {
-    nav.removeChild(menuIcon);
   nav.appendChild(menuClose);
   conteiner.appendChild(menuBar);
   menuBar.appendChild(menuUl);
 }
 
 function removeMenuBar() {
-    conteiner.removeChild(menuBar);
-    nav.removeChild(menuClose);
+  conteiner.removeChild(menuBar);
+  nav.removeChild(menuClose);
 }
