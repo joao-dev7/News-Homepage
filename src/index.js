@@ -4,8 +4,8 @@ const nav = document.querySelector("nav");
 /* SetIcons */
 const menuIcon = document.createElement("img");
 const menuClose = document.createElement("img");
-setMenu();
-setClose();
+setMenu(menuIcon);
+setClose(menuClose);
 
 /* CloneUl*/
 const ul = document.querySelector("ul");
